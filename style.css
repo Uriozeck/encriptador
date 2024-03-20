@@ -1,0 +1,120 @@
+/*#0A3871 dark-blue*/
+body {
+    background-color: #e9e9e9;
+    font-family: "Inter", sans-serif;
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.contenedor {
+    width: 1140px;
+    margin: 0 auto;
+}
+.logo {
+    padding: 30px 0;
+}
+.main {
+    display: flex;
+    gap: 3%;
+}
+.encriptar-texto {
+    width: 60%;
+}
+.encriptar-texto-campos {
+    width: 100%;
+}
+.campo-texto {
+    padding: 30px;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: bold;
+    width: -webkit-fill-available;
+    background-color: transparent;
+    color: #0A3871;
+    border: none;
+    font-family: "Inter", sans-serif;
+}
+.aviso {
+    margin-bottom: 15px;
+}
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-encriptar, .btn-desencriptar {
+    width: 48%;
+    padding: 24px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Inter", sans-serif;
+}
+
+.btn-encriptar{
+    background-color: #0A3871;
+    color: #fff;
+}
+
+.btn-desencriptar {
+    background-color: #ffffff00;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+.mensaje-encriptado {
+    width: 37%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 24px;
+}
+.campo-mensaje-encriptado {
+    width: 100%;
+}
+.campo-mensaje {
+    font-family: "Inter", sans-serif;
+    width: -webkit-fill-available;
+    
+    background-image: url(imagenes/Muñeco.png);
+    background-repeat: no-repeat;
+    border: none;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #0A3871;
+}
+.btn-copiar-mensaje {
+    width: 100%;
+    padding: 24px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Inter", sans-serif;
+
+    background-color: #ffffff00;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+textarea:focus-visible {
+    outline: unset;
+}
+
+@media (max-width: 769px) {
+    body {
+        padding: 0 25px;
+    }
+    .main {
+        flex-direction: column;
+    }
+    .encriptar-texto, .contenedor, .mensaje-encriptado {
+        width: 100%;
+    }
+    .mensaje-encriptado {
+        margin-top: 30px;
+        padding: 10px 0;
+    }
+}
