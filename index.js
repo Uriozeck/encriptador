@@ -13,7 +13,7 @@ const matrizVocales = [
     ["ó", "ober"],
     ["ú", "ufat"],
 ];
-const copiarTexto = document.getElementById("#btn-copiar").innerHTML;
+const copiarTexto = document.getElementById("#btn-copiar");
 
     function btnEncriptar() {
         const texto = encriptar(encriptarTexto.value.toLowerCase());
@@ -30,7 +30,7 @@ const copiarTexto = document.getElementById("#btn-copiar").innerHTML;
     }
 
     function btnDesencriptar() {
-        const mensaje = desencriptar(encriptarTexto.value.toLowerCase())
+        const mensaje = desencriptar(encriptarTexto.value.toLowerCase());
         mensajeEncriptado.value = mensaje;
     }
 
@@ -43,12 +43,8 @@ const copiarTexto = document.getElementById("#btn-copiar").innerHTML;
         return fraseADesencriptar;
     }
 
-
-  const copiarContenido = async () => {
-    try {
-      await navigator.clipboard.writeText(copiarTexto);
-      console.log('Contenido copiado al portapapeles');
-    } catch (err) {
-      console.error('Error al copiar: ', err);
+    function btnCopiar() {
+        const copiar = (mensajeEncriptado.value.toLowerCase());
+        encriptarTexto.value = copiar;
+        navigator.clipboard.writeText(copiar);
     }
-  }
