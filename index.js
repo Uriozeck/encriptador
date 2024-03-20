@@ -13,6 +13,7 @@ const matrizVocales = [
     ["ó", "ober"],
     ["ú", "ufat"],
 ];
+const copiarTexto = document.getElementById("#btn-copiar").innerHTML;
 
     function btnEncriptar() {
         const texto = encriptar(encriptarTexto.value.toLowerCase());
@@ -41,3 +42,13 @@ const matrizVocales = [
         }
         return fraseADesencriptar;
     }
+
+
+  const copiarContenido = async () => {
+    try {
+      await navigator.clipboard.writeText(copiarTexto);
+      console.log('Contenido copiado al portapapeles');
+    } catch (err) {
+      console.error('Error al copiar: ', err);
+    }
+  }
